@@ -2,7 +2,7 @@ overwrite: true
 schema: "https://fakeql.com/graphql/2f4c5a08cff11766bc2250eb3f9d2108"
 documents: "src/**/*.graphql"
 generates:
-  src/generated/graphql.tsx:
+  src/generated/index.ts:
     plugins:
       - "typescript"
       - "typescript-operations"
@@ -10,6 +10,3 @@ generates:
     config:
       fetcher:
         endpoint: 'https://fakeql.com/graphql/2f4c5a08cff11766bc2250eb3f9d2108'
-  ./graphql.schema.json:
-    plugins:
-      - "introspection"
